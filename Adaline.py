@@ -136,15 +136,6 @@ class AdalineGD:
 
         for i in range(self.n_iter):
             net_input = self.net_input(X)
-            
-            # Please note that the "activation" method has no effect
-            # in the code since it is simply an identity function. We
-            # could write `output = self.net_input(X)` directly instead.
-            # The purpose of the activation is more conceptual, i.e.,  
-            # in the case of logistic regression (as we will see later), 
-            # we could change it to
-            # a sigmoid function to implement a logistic regression classifier
-            
             output = self.activation(net_input) # =y tidle
             errors = (y - output)
             
